@@ -2,7 +2,14 @@
       get_header();
 ?>
 
-<div class="text-center">
+<div class="video-background-container">
+  			<video preload="auto" autoplay loop muted class="video-background">
+  				<source type="video/mp4" src="videos/Puppy.mp4">
+  			</video>
+  		</div>
+      </header>     
+      <main class="main" id="main"> 
+      <div class="text-center">
         <h1>Мы ищем отзывчивых людей</h1>
           <div class="lead">
                 <a class="btn btn-lg active" href="help.html" >Оказать помощь</a>

@@ -14,6 +14,11 @@
       </div>
     </div>
   </footer>
+  <script src="../zlv/js/jquery-3.3.1.slim.min.js"></script>
+  <script src="../zlv/js/popper.min.js"></script>
+  <script src="../zlv/js/bootstrap.min.js"></script>
+  <script src="js/jquery.magnific-popup.js"></script>
+  <script src="../zlv/js/main.js"></script>
   <?php wp_footer(); ?>
   </body>
 </html>    
