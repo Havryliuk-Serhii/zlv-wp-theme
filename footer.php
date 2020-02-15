@@ -1,10 +1,4 @@
-<?php
-/**
- * The template for displaying the footer
- * @package Zlv Theme
- */
-
-?>
+<?php ?>
 </main>             
   </div>
   <footer class="footer bg-dark">

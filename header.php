@@ -1,10 +1,4 @@
-<?php
-/**
- * The header for our theme
- * @package Zlv Theme
- */
-
-?>
+<?php ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -17,12 +11,19 @@
   <div class="wrapper">
     <header class="header">
     <nav class="navbar navbar-expand-lg fixed-top" id="nav">
-      <a href="" class="navbar-brand">Жмеринская лига волонтеров</a>
+      <a href="<?php echo home_url(); ?>" class="navbar-brand"><?php bloginfo( 'name' ); ?></a>
       <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
       </button> 
       <div id="my-nav" class="collapse navbar-collapse">
+        <?php
+            wp_nav_menu( array(
+                  'theme_location' => 'menu-1',
+                  'menu_id'        => 'primary-menu',
+            ) );
+        ?>
+        <!--
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link" href="">Главная <span class="sr-only">(current)</span></a>
@@ -39,6 +40,6 @@
           <li class="nav-item">
             <a class="nav-link" href="">Контакты</a>
           </li>
-        </ul>
+        </ul>-->
       </div>
     </nav>  
