@@ -10,7 +10,7 @@
   <footer class="footer bg-dark">
     <div class="footer-content">
     <div class="copyright">
-      <p class="text-block">&copy; 2019 Жмеринская Лига Волонтеров</p>
+      <p class="text-block">&copy; <?php echo date("Y") ?> <a href="<?php echo home_url(); ?>" title="<?php esc_attr( bloginfo('name') ); ?>"><?php bloginfo('name'); ?></a></p>
       </div>
     </div>
   </footer>

@@ -1,4 +1,5 @@
 <?php
+show_admin_bar(false);
 
 if ( ! function_exists( 'zlv_setup' ) ) :
 	function zlv_setup() {
