@@ -47,6 +47,7 @@ add_action( 'widgets_init', 'zlv_widgets_init' );
  * Enqueue scripts and styles.
  */
 function zlv_scripts() {
+	// add styles
 	wp_enqueue_style( 'zlv-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'zlv-grid-style', get_template_directory_uri() . '/css/bootstrap-grid.css');
 	wp_enqueue_style( 'zlv-bootstrap-style', get_template_directory_uri() . '/css/bootstrap.css');
@@ -54,10 +55,12 @@ function zlv_scripts() {
 	wp_enqueue_style( 'zlv-fontawesome-style', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css', array(), '5.11.2' );
 	wp_enqueue_style( 'zlv-main-style', get_template_directory_uri() . '/css/main.css');
 	wp_enqueue_style( 'vetapteka-media',  get_template_directory_uri() . '/css/media.css');
-
-	wp_enqueue_script( 'zlv-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'zlv-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	// add scripts
+	wp_enqueue_script( 'zlv-jquery-slim',  get_template_directory_uri() . '/js/jquery-3.3.1.slim.min.js', array(),'3.3.1', true);
+	wp_enqueue_script( 'zlv-popper-script', get_template_directory_uri() . '/js/popper.min.js', array(), '', true );
+	wp_enqueue_script( 'zlv-bootstrap-script', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '', true );
+	wp_enqueue_script( 'zlv-popup-script', get_template_directory_uri() . '/js/jquery.magnific-popup.js', array(), '', true );
+	wp_enqueue_script( 'zlv-main-script', get_template_directory_uri() . '/js/main.js', array(), '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
