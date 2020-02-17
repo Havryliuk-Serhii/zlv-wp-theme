@@ -711,6 +711,10 @@ a .btn-link:visited{
   width: 100%;
   z-index: 4;    
 }
+.bg-transparent{
+  color: transparent;
+  opacity: 0.8;
+}
 .footer-content{
   margin: 0 auto;
   padding-top: 25px;
@@ -723,4 +727,8 @@ a .btn-link:visited{
 .bg-dark{
   color: #1b1b1b;
   opacity: 0.8;
+}
+.text-block a:hover{
+  text-decoration: none;
+  text-shadow: 1px 4px 16px rgba(0, 0, 0);
 }
