@@ -17,29 +17,17 @@
         <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
       </button> 
       <div id="my-nav" class="collapse navbar-collapse">
-        <?php
-            wp_nav_menu( array(
-                  'theme_location' => 'menu-1',
-                  'menu_id'        => 'primary-menu',
-            ) );
-        ?>
-        <!--
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="">Главная <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="">Новости</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="">Ищут дом</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="">Нужна помощь</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="">Контакты</a>
-          </li>
-        </ul>-->
+          <?php 
+              wp_nav_menu( [
+                    'theme_location' => 'primary',
+                    'container' => false,
+                    'menu_class' => 'menu',
+                    'menu_id' => '',
+                    'fallback_cb' => '__return_false',
+                    'items_wrap' => '<ul id="%1$s" class="navbar-nav mr-auto">%3$s</ul>',
+                    'depth' => 0,
+                    'walker' => new Bootstrap_Menu_Walker(),
+              ] );
+          ?>
       </div>
     </nav>  
