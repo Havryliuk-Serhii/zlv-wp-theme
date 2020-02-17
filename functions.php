@@ -162,6 +162,19 @@ add_filter( 'document_title_parts', function( $parts ){
 **/
 
 
+
+// add a special class to the excerpt's p element
+
+add_filter( "the_excerpt", "add_class_to_excerpt" );
+
+function add_class_to_excerpt( $excerpt ) {
+    return str_replace('<p', '<p class="card-text"', $excerpt);
+}
+
+add_filter('excerpt_more', 'my_func');
+function my_func($more) {
+	return '';
+}
 /**
 *  Pagination
 **/

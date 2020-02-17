@@ -15,7 +15,7 @@
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <section id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
         <div class="card align-items-start">
-			<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('thumbnail', array('class' => 'card-img col-md-12 col-lg-6')); ?></a>
+			<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('', array('class' => 'card-img col-md-12 col-lg-6')); ?></a>
             <div class="card-body col-md-12">
                 <h3 class="card-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
                 <div class="aftertitle-meta">
@@ -23,7 +23,7 @@
                     <span class="date"><i class="far fa-calendar-alt" aria-hidden="true"></i><?php the_time('j M, Y')?></span>
                     <span class="comments-link"><i class="far fa-comment" aria-hidden="true"></i><?php comments_popup_link('Комментариев нет', '1 комментарий', '% комментариев')?></span>
                 </div>
-                <p class="card-text"><?php the_excerpt(); ?></p>
+              <?php the_excerpt(); ?>
                 <a href="<?php the_permalink() ?>" class="btn-post"><?php esc_html_e('Далее','zlv' ) ?></a>
             </div>
         </div>
