@@ -14,7 +14,7 @@ Template Name: Gallery Page
             </nav>
         </div>
         <div class="page-title">
-            <h2>Наши питомцы ищут дом</h2>
+            <h2><?php echo wp_get_document_title(); ?></h2>
                 <p class="lead">Возьмите хвостик, который подарит Вам радость и свою любовь</p>
         </div>
         <div class="album">

@@ -1,11 +1,5 @@
-<?php get_header(); ?>
-      <div class="video-background-container">
-  			<video preload="auto" autoplay loop muted class="video-background">
-  				<source type="video/mp4" src="<?php bloginfo('template_url'); ?>/videos/Puppy.mp4">
-  			</video>
-  		</div>
-      </header>     
-      <main class="main" id="main"> 
+<?php get_header('main'); ?>
+      
       <div class="text-center">
         <h1><?php bloginfo('description'); ?></h1>
           <div class="lead">
@@ -14,4 +8,4 @@
           </div>
       </div>
       <div class="divider"></div>
-<?php get_footer();
+<?php get_footer('main'); ?>

@@ -17,7 +17,7 @@ get_header();
         
   <section id="contact">
     <div class="page-title">
-      <h2>Связаться с нами</h2>
+      <h2><?php echo wp_get_document_title(); ?></h2>
       <p class="lead">Мы всегда рады и открыты к общению, сотрудничеству и помощи</p>
     </div>
     <div class="contact-area">

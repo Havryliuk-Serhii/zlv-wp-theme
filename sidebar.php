@@ -1,9 +1,4 @@
 <?php
-/**
- * The sidebar containing the main widget area
- * @package Creative_Theme
- */
-
 if ( ! is_active_sidebar( 'sidebar' ) ) {
 	return;
 }
@@ -23,3 +18,4 @@ if ( ! is_active_sidebar( 'sidebar' ) ) {
                     </ul>
                 </section>
             </aside>
+

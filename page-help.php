@@ -14,7 +14,7 @@ Template Name: Page Help
                     </nav>
                 </div>
             <div class="page-title">
-                    <h2>Нужна помощь</h2>
+                    <h2><?php echo wp_get_document_title(); ?></h2>
                     <p class="lead">В данном разделе Мы просим всех отзывчивых людей оказать нам помощь</p>
             </div>            
                 <div class="container">
