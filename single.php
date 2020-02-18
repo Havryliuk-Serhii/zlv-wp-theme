@@ -3,10 +3,8 @@
                 <div class="breadcrumb-container">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home"></i></a></li>
-                            <li class="breadcrumb-item" aria-current="page"><a href="blog.html">Новости</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Статья</li>
-                        </ol>
+                        	<?php custom_breadcrumb(); ?>                        	
+                        </ol>    
                     </nav>
                 </div>
 	<?php while ( have_posts() ) : the_post();?>
@@ -23,13 +21,14 @@
             <div class="container">
                 <div class="row">
                     <?php the_content(); ?>
+                    <div class="post-navigation">            	
+       					<?php the_post_navigation(); ?>  
+    				</div>
                 </div>
             </div>
         </div>                         
     </section>
-	<div class="post-navigation">            	
-       	<?php the_post_navigation(); ?>  
-    </div>		
+			
         <?php if ( comments_open() || get_comments_number() ) :
 				comments_template();
 			endif; ?>

@@ -9,13 +9,13 @@
 <body <?php body_class(); ?>>
   <div class="wrapper">
     <header class="header">
-    <nav class="navbar navbar-expand-lg fixed-top" id="nav">
-      <a href="<?php echo home_url(); ?>" class="navbar-brand"><?php bloginfo( 'name' ); ?></a>
-      <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
+      <nav class="navbar navbar-expand-lg fixed-top" id="nav">
+        <a href="<?php echo home_url(); ?>" class="navbar-brand"><?php bloginfo( 'name' ); ?></a>
+        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
         aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-      </button> 
-      <div id="my-nav" class="collapse navbar-collapse">
+          <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+        </button> 
+        <div id="my-nav" class="collapse navbar-collapse">
           <?php 
               wp_nav_menu( [
                     'theme_location' => 'primary',
@@ -28,12 +28,12 @@
                     'walker' => new Bootstrap_Menu_Walker(),
               ] );
           ?>
-      </div>
-    </nav>
-    <div class="video-background-container">
+        </div>
+      </nav>
+      <div class="video-background-container">
         <video preload="auto" autoplay loop muted class="video-background">
           <source type="video/mp4" src="<?php bloginfo('template_url'); ?>/videos/Puppy.mp4">
         </video>
       </div>
-      </header>     
-      <main class="main" id="main">   
+    </header>     
+    <main class="main" id="main">   

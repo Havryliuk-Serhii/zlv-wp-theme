@@ -205,7 +205,7 @@ img.header-bg{
   background-color: transparent;
 }
 .breadcrumb-item + .breadcrumb-item::before {
-  content: ">";
+  /*content: ">";*/
   color: #fff;
 }
 .breadcrumb-item.active {
@@ -273,9 +273,14 @@ img.header-bg{
 }
 .card-img{
   border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+}
+.card-title{
+  text-align: center;
 }
 .card-title a{
-  color: #000;
+  color: #000;  
 }
 .card-title a:hover{
   color: #1b1b1b;

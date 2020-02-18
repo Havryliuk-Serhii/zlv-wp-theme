@@ -160,17 +160,53 @@ add_filter( 'document_title_parts', function( $parts ){
 /**
 *  Breadcrumbs
 **/
+function custom_breadcrumb(){
+$pageNum = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+$separator = ' > '; 
+	if( is_front_page() ){
+ 
+		if( $pageNum > 1 ) {
+			echo '<li class="breadcrumb-item"><a href="' . site_url() . '"><i class="fas fa-home"></i></a></li>' . $separator . $pageNum ;
+		} else {
+			echo 'Вы находитесь на главной странице';
+		}
+ 
+	} else { 
+ 
+		echo '<li class="breadcrumb-item"><a href="' . site_url() . '"><i class="fas fa-home"></i></a></li>' . $separator . '<li class="breadcrumb-item" aria-current="page">' . wp_get_document_title() . '</li>';
+ 
+ 
+		if( is_single() ){ // записи
+ 
+			 echo  '<li class="breadcrumb-item active" aria-current="page"></li>'; 
+ 
+		} elseif ( is_404() ) { // если страницы не существует
+ 
+			echo 'Ошибка 404';
+ 
+		}
+ 
+		if ( $pageNum > 1 ) { // номер текущей страницы
+			echo ' (' . $pageNum . '-я страница)';
+		}
+ 
+	}
+ 
+}
 
 
-
-// add a special class to the excerpt's p element
+/**
+*  add a special class to the excerpt's <p> element
+**/
 
 add_filter( "the_excerpt", "add_class_to_excerpt" );
 
 function add_class_to_excerpt( $excerpt ) {
     return str_replace('<p', '<p class="card-text"', $excerpt);
 }
-
+/**
+*  Delete 
+**/
 add_filter('excerpt_more', 'my_func');
 function my_func($more) {
 	return '';
