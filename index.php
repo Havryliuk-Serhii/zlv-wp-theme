@@ -21,7 +21,7 @@
                 <div class="aftertitle-meta">
                     <span class="author"><i class="fas fa-user-circle" aria-hidden="true"></i><?php the_author(); ?></span>
                     <span class="date"><i class="far fa-calendar-alt" aria-hidden="true"></i><?php the_time('j M, Y')?></span>
-                    <span class="comments-link"><i class="far fa-comment" aria-hidden="true"></i><?php comments_popup_link('Комментариев нет', '1 комментарий', '% комментариев')?></span>
+                    <span class="comments-link"><i class="far fa-comment" aria-hidden="true"></i><?php comments_number('Комментариев нет', '1 комментарий', '% комментариев')?></span>
                 </div>
               <?php the_excerpt(); ?>
                 <a href="<?php the_permalink() ?>" class="btn-post"><?php esc_html_e('Далее','zlv' ) ?></a>
