@@ -3,10 +3,7 @@
     <div class="breadcrumb-container">
     	<nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-            	<?php custom_breadcrumb(); ?>
-            	<!--
-            	<li class="breadcrumb-item"><a href="<?php echo home_url(); ?>"><i class="fas fa-home"></i></a></li>
-                <li class="breadcrumb-item active" aria-current="page">Новости</li>-->
+            	<?php custom_breadcrumb(); ?>            	
             </ol>
         </nav>
     </div>
