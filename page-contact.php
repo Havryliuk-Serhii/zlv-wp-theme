@@ -9,8 +9,7 @@ get_header();
             <div class="breadcrumb-container">
               <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
-                      <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home"></i></a></li>
-                      <li class="breadcrumb-item active" aria-current="page">Контакты</li>
+                      <?php custom_breadcrumb(); ?>  
                   </ol>
               </nav>
             </div>
@@ -18,7 +17,7 @@ get_header();
   <section id="contact">
     <div class="page-title">
       <h2><?php echo wp_get_document_title(); ?></h2>
-      <p class="lead">Мы всегда рады и открыты к общению, сотрудничеству и помощи</p>
+      <p class="lead"><?php the_field('page-description'); ?></p>
     </div>
     <div class="contact-area">
       <div class="container">

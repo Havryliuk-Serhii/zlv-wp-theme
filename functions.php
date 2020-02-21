@@ -326,7 +326,7 @@ function zlv_list_comment( $comment, $args, $depth ) {
 	?>
 	<li class="media">
 		<div class="media-left">
-			<a href="#">
+			<a href="<?php the_author_link(); ?>">
 				<?php 
 						echo get_avatar( $comment, '64',  'mysterman', '', array('class'=>'media-img') );
 				?>

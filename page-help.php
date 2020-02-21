@@ -8,14 +8,13 @@ Template Name: Page Help
                 <div class="breadcrumb-container">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home"></i></a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Нужна помощь</li>
+                            <?php custom_breadcrumb(); ?>  
                         </ol>
                     </nav>
                 </div>
             <div class="page-title">
                     <h2><?php echo wp_get_document_title(); ?></h2>
-                    <p class="lead">В данном разделе Мы просим всех отзывчивых людей оказать нам помощь</p>
+                    <p class="lead"><?php the_field('page-description'); ?></p>
             </div>            
                 <div class="container">
                     <div class="row">
