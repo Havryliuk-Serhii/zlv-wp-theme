@@ -212,7 +212,7 @@ function add_class_to_excerpt( $excerpt ) {
     return str_replace('<p', '<p class="card-text"', $excerpt);
 }
 /**
-*  Delete 
+*  Delete square brackets
 **/
 add_filter('excerpt_more', 'my_func');
 function my_func($more) {
@@ -324,27 +324,27 @@ function zlv_list_comment( $comment, $args, $depth ) {
 		$add_below = 'div-comment';
 	}
 	?>
-		<div class="media-heading">
-			<div class="media-img">
+	<li class="media">
+		<div class="media-left">
+			<a href="#">
 				<?php 
-					echo get_avatar( $comment, 95, '', '', array('class'=>'media-object img-rounded') );
-			 	?>	
-			</div>
+						echo get_avatar( $comment, '64',  'mysterman', '', array('class'=>'media-img') );
+				?>
+			</a>						
+		</div>		
+		<div class="media-body">
 			<?php
 				printf(
-					__( '<h4>%s</h4>' ),
+					__( '<h4 class="media-heading">%s</h4>' ),
 					get_comment_author()
 				);			
 			?>
 			<?php 
 				printf(
-					__('<h4><span>%1$s</span></h4>'),
+					__('<h4 class="media-heading"><span class="comment-date">%1$s</span></h4>'),
 					get_comment_date()
 				);
 			?>
-		</div>		
-		<div class="media-body">
-			
 			<?php if ( $comment->comment_approved == '0' ) { ?>
 			<em class="comment-awaiting-moderation">
 				<?php _e( 'Ваш комментарий ожидает модерации' ); ?>
@@ -366,6 +366,7 @@ function zlv_list_comment( $comment, $args, $depth ) {
 				); ?>
 			</div>
 		</div>
+	</li>  
 	<?php if ( 'div' != $args['style'] ) { ?>
 	
 	<?php }

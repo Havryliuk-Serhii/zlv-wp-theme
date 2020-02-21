@@ -14,13 +14,13 @@
                         </div> <!-- .navigation -->
             <?php endif; // check for comment navigation ?>
 
-            <div class="media-list">
+            <ul class="media-list">
                 <?php
                     wp_list_comments(array(
                             'callback' => 'zlv_list_comment',
                     ));
                 ?>                              
-            </div>  
+            </ul>  
             <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
                         <div class="navigation">
                             <div class="nav-previous"><?php previous_comments_link( __( '<span class="meta-nav">&larr;</span> Старые комментарии', 'zlv' ) ); ?></div>
@@ -44,9 +44,6 @@
                             'email'  => '<div class="form-lable">' . '<input id="email" name="email" class="form-control" placeholder="Email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) .  esc_attr(  $commenter['comment_author_email'] ) . ' aria-describedby="email-notes"' . $aria_req . $html_req  . ' /></div></div>',
                             ),
                     'comment_field'        => '<div class="col-md-12"><textarea name="comment" id="comment" cols="30" rows="7" class="form-control" placeholder="Сообщение"></textarea></div>',
-                    'title_reply'          => esc_html_e( 'Оставте комментарий' ),
-                    'title_reply_before'   => '<h3 class="title-center-black">',
-                    'title_reply_after'    => '</h3>',
                     'submit_button'        => '<div class="form-group"><button type="submit" name="submit" class="btn btn-submit"">%1$s</button></div>',                     
         );
         comment_form($comments_args);

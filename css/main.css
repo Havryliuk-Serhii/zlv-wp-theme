@@ -469,8 +469,7 @@ blockquote{
 }
 .media-img{
   border-radius: 50%;
-  border:1px solid #fff;
-  width: 100%;
+  border:1px solid #fff;  
 }
 .media-body{
   padding: 20px 10px 10px 10px;
@@ -484,6 +483,29 @@ blockquote{
   padding: 20px;
   font-size: 0.9rem;
   font-weight: lighter;
+}
+.comment-reply-title{
+  color: #000;
+  text-align: center;
+  padding: 20px;
+}
+#cancel-comment-reply-link{
+  color: #000;
+  text-align: center;
+  font-size: 16px;
+}
+.comment-notes{
+  color: #000;
+  text-align: center;
+  font-size: 16px;
+}
+.comment-form-cookies-consent{
+  margin: 10px;
+  color: #000;
+  font-size: 14px;
+}
+#wp-comment-cookies-consent{
+  margin: 0 10px;
 }
 /*
 * Form
