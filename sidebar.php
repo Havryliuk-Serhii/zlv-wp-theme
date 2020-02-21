@@ -1,16 +1,12 @@
 <aside class="sidebar">
     <section class="search-form">
         <form class="form-inline">
-            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            <input id="s" class="form-control" type="search" placeholder="Search" aria-label="Search" value="<?php echo get_search_query(); ?>">
             <button class="btn-submit" type="submit"><i class="fas fa-search"></i></button>
         </form> 
     </section>
     <section class="widget">
-        <h3 class="widget-title">Recent Posts</h3>
-        <ul>
-            <li class="widget-item"><a href="#">Название карточки2</a></li>
-            <li class="widget-item"><a href="blog-item.html" aria-current="page">Название карточки1!</a></li>
-        </ul>
+        <?php dynamic_sidebar( 'sidebar-1' ); ?>       
     </section>
 </aside>
 
