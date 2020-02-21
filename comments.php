@@ -40,8 +40,8 @@
     <?php 
         $comments_args = array(
                     'fields' => array (
-                            'author' => '<div class="form-group"><div class="form-lable">' . '<input type="text" class="form-control" id="author" name="author" placeholder="Имя"' . esc_attr( $commenter['comment_author'] ) . $aria_req . $html_req . ' /></div>',
-                            'email'  => '<div class="form-lable">' . '<input id="email" name="email" class="form-control" placeholder="Email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) .  esc_attr(  $commenter['comment_author_email'] ) . ' aria-describedby="email-notes"' . $aria_req . $html_req  . ' /></div></div>',
+                            'author' => '<div class="form-group"><div class="form-lable"><input type="text" class="form-control" id="author" name="author" placeholder="Имя"' . esc_attr( $commenter['comment_author'] ) . $aria_req . $html_req . ' /></div>',
+                            'email'  => '<div class="form-lable"><input id="email" name="email" class="form-control" placeholder="Email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) .  esc_attr(  $commenter['comment_author_email'] ) . ' aria-describedby="email-notes"' . $aria_req . $html_req  . ' /></div></div>',
                             ),
                     'comment_field'        => '<div class="col-md-12"><textarea name="comment" id="comment" cols="30" rows="7" class="form-control" placeholder="Сообщение"></textarea></div>',
                     'submit_button'        => '<div class="form-group"><button type="submit" name="submit" class="btn btn-submit"">%1$s</button></div>',                     
