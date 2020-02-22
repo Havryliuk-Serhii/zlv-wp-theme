@@ -1,13 +1,27 @@
+<?php 
+/**
+ * Template Name: Search Page
+ */
+?> 
 <?php get_header(); ?>
 <article class="content">
+    <div class="breadcrumb-container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <?php custom_breadcrumb(); ?>               
+            </ol>
+        </nav>
+    </div>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <div class="page-title">
         <h2>
         	<?php
-				printf( esc_html__( 'Результаты поиска для: %s', 'zlv' ), '<span>' . get_search_query() . '</span>' );
+				printf( esc_html__( 'Результаты поиска:', 'zlv' ),  get_search_query() );
+
 			?>
 		</h2>        
     </div>
+    
     <?php
 		while ( have_posts() ) :
 				the_post();
@@ -26,7 +40,8 @@
     		the_posts_navigation();
 		else :?>	
 			<p>Ничего не найдено</p>
-     endif; ?>	              
+           
+     <?php endif; ?>	              
 </article>
 <?php
     get_sidebar();
