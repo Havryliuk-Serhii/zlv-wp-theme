@@ -31,7 +31,7 @@
         </div>
       </nav>
     <div class="img-bg-container">
-      <img class="header-bg" src="<?php bloginfo('template_url'); ?>/img/hero-bg.jpg" alt="header background">
+      <img class="header-bg" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/hero-bg.jpg" alt="header background">
     </div>
   </header>     
   <main class="main" id="main">   

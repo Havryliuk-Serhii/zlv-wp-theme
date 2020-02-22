@@ -32,7 +32,7 @@
       </nav>
       <div class="video-background-container">
         <video preload="auto" autoplay loop muted class="video-background">
-          <source type="video/mp4" src="<?php bloginfo('template_url'); ?>/videos/Puppy.mp4">
+          <source type="video/mp4" src="<?php echo esc_url( get_template_directory_uri() ); ?>/videos/Puppy.mp4">
         </video>
       </div>
     </header>     

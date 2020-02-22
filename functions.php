@@ -347,7 +347,7 @@ function zlv_list_comment( $comment, $args, $depth ) {
 			?>
 			<?php if ( $comment->comment_approved == '0' ) { ?>
 			<em class="comment-awaiting-moderation">
-				<?php _e( 'Ваш комментарий ожидает модерации' ); ?>
+				<?php _e( 'Ваш комментарий ожидает модерации', zlv ); ?>
 			</em><br/>
 			<?php } ?>
 			<?php comment_text(); ?>

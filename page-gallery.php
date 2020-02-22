@@ -20,8 +20,9 @@ Template Name: Gallery Page
         <div class="container">            
             <div class="row">
                 <?php 
+                    $id = 4;
                     $args = array(
-                        'cat' => $category,
+                        'cat' => $id,
                         'posts_per_page' => -1
                     );        
                     $gallery = new WP_Query($args);
