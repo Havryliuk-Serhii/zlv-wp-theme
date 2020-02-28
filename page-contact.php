@@ -49,32 +49,39 @@ get_header();
   </section>
   <section id="contact-form">   
       <div class="page-title">
-        <h3>Оставьте нам Ваше сообщение</h3>
-        <p class="lead">Мы ответим на все интересующие Вас вопросы</p>
+        <h3><?php esc_html_e('Оставьте нам Ваше сообщение','zlv' ) ?></h3>
+        <p class="lead"><?php esc_html_e('Мы ответим на все интересующие Вас вопросы','zlv' ) ?></p>
       </div>
     <div class="container">
       <div class="row">
-        <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="#" <?php echo zlv_get_background('form_bg'); ?>>
+        <?php if( isset( $_GET['msg'] ) ) {
+                if( $_GET['msg'] == 'success' )
+                  echo '<span>Сообщение успешно отправлено</span>';
+                if( $_GET['msg'] == 'error' )
+                echo '<span><strong>Ошибка:<strong> Проверьте правильность введённых вами данных.</span>'; 
+              }             
+        ?>
+        <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="<?php echo site_url() ?>/send.php" <?php echo zlv_get_background('form_bg'); ?>>
           <div class="col-md-12">
             <div class="form-group">
                 <div class="form-lable">
-                    <label>Имя *</label>
-                    <input type="text" name="name" class="form-control" required="required" placeholder="Введите Ваше Имя" >
+                    <label><?php esc_html_e('Имя *','zlv' ); ?></label>
+                    <input type="text" name="name" class="form-control" required="true" placeholder="Введите Ваше Имя" >
                 </div>
                 <div class="form-lable">
-                    <label>Телефон *</label>
-                    <input type="text" class="form-control" required="required" placeholder="Введите Ваш номер телефона" >
+                    <label><?php esc_html_e('Телефон *','zlv' ); ?></label>
+                    <input type="text" name="phone" class="form-control" required="true" placeholder="Введите Ваш номер телефона" >
                 </div>             
             </div>
            
           </div>
           <div class="col-md-12">
             <div class="form-lable-textarea">
-              <label>Сообщение *</label>
-              <textarea name="message" id="message" required="required" class="form-control" rows="8"placeholder="Оставте нам Ваше сообщение" ></textarea>
+              <label><?php esc_html_e('Сообщение *','zlv' ); ?></label>
+              <textarea name="message" id="message" required="true" class="form-control" rows="8"placeholder="Оставте нам Ваше сообщение" ></textarea>
             </div>
             <div class="form-group">
-              <button type="submit" name="submit" class="btn btn-submit" required="required">Отправить сообщение</button>
+              <button type="submit" name="submit" class="btn btn-submit" required="required"><?php esc_html_e('Отправить сообщение','zlv' ); ?></button>
             </div>
           </div>
         </form>
