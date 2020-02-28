@@ -24,7 +24,7 @@ get_header();
         <div class="row">
           <div class="col-lg-5 col-md-12">              
             <div class="contact-img">
-              <img src="img/contact2.png" alt="">
+              <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/contact2.png" alt="">
             </div>
           </div>
           <div class="col-lg-7 col-md-12">
@@ -54,7 +54,7 @@ get_header();
       </div>
     <div class="container">
       <div class="row">
-        <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="#">
+        <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="#" <?php echo zlv_get_background('form_bg'); ?>>
           <div class="col-md-12">
             <div class="form-group">
                 <div class="form-lable">

@@ -371,3 +371,15 @@ function zlv_list_comment( $comment, $args, $depth ) {
 	
 	<?php }
 }
+/**
+* Contact form background
+**/
+function zlv_get_background($field, $cat = null, $position = true, $repeat = true, $size = true){
+    if( get_field($field, $cat) ){
+    	$bg_position = $position ? 'background-position: 0 0;' : '';
+    	$bg_repeat = $repeat ? 'background-repeat: no-repeat;' : '';
+    	$bg_size = $size ? 'background-size: cover;' : '';
+       return ' style="background-image: url(' . get_field($field, $cat) . '); ' . $bg_position . $bg_repeat . $bg_size .'"';
+    }
+    return null;
+}
