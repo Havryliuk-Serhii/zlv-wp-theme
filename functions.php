@@ -383,3 +383,114 @@ function zlv_get_background($field, $cat = null, $position = true, $repeat = tru
     }
     return null;
 }
+/**
+*  Names and phone numbers of contact persons 
+**/
+//  first person
+function first_person_name_option(){
+		add_settings_field(
+		'first_person_name', 
+		'ФИО 1', 
+		'display_first_person_name',
+		'general' 
+	);
+    
+	register_setting(
+		'general', 
+		'first_person_name_field' 
+	);
+}
+add_action('admin_init', 'first_person_name_option');
+function display_first_person_name(){
+	echo "<input type='text' class='regular-text' name='first_person_name_field' value='" . esc_attr(get_option('first_person_name_field')) . "'>";
+}
+
+function first_person_phone_option(){
+		add_settings_field(
+		'first_person_phone', 
+		'Телефон 1', 
+		'display_first_person_phone',
+		'general' 
+	);
+    
+	register_setting(
+		'general', 
+		'first_person_phone_field' 
+	);
+}
+add_action('admin_init', 'first_person_phone_option');
+function display_first_person_phone(){
+	echo "<input type='text' class='regular-text' name='first_person_phone_field' value='" . esc_attr(get_option('first_person_phone_field')) . "'>";
+}
+//  second person
+function second_person_name_option(){
+		add_settings_field(
+		'second_person_name', 
+		'ФИО 2', 
+		'display_second_person_name',
+		'general' 
+	);
+    
+	register_setting(
+		'general', 
+		'second_person_name_field' 
+	);
+}
+add_action('admin_init', 'second_person_name_option');
+function display_second_person_name(){
+	echo "<input type='text' class='regular-text' name='second_person_name_field' value='" . esc_attr(get_option('second_person_name_field')) . "'>";
+}
+
+function second_person_phone_option(){
+		add_settings_field(
+		'second_person_phone', 
+		'Телефон 2', 
+		'display_second_person_phone',
+		'general' 
+	);
+    
+	register_setting(
+		'general', 
+		'second_person_phone_field' 
+	);
+}
+add_action('admin_init', 'second_person_phone_option');
+function display_second_person_phone(){
+	echo "<input type='text' class='regular-text' name='second_person_phone_field' value='" . esc_attr(get_option('second_person_phone_field')) . "'>";
+}
+//  third person
+function third_person_name_option(){
+		add_settings_field(
+		'third_person_name', 
+		'ФИО 3', 
+		'display_third_person_name',
+		'general' 
+	);
+    
+	register_setting(
+		'general', 
+		'third_person_name_field' 
+	);
+}
+add_action('admin_init', 'third_person_name_option');
+function display_third_person_name(){
+	echo "<input type='text' class='regular-text' name='third_person_name_field' value='" . esc_attr(get_option('third_person_name_field')) . "'>";
+}
+
+function third_person_phone_option(){
+		add_settings_field(
+		'third_person_phone', 
+		'Телефон 3', 
+		'display_third_person_phone',
+		'general' 
+	);
+    
+	register_setting(
+		'general', 
+		'third_person_phone_field' 
+	);
+}
+add_action('admin_init', 'third_person_phone_option');
+function display_third_person_phone(){
+	echo "<input type='text' class='regular-text' name='third_person_phone_field' value='" . esc_attr(get_option('third_person_phone_field')) . "'>";
+}

@@ -30,16 +30,16 @@ get_header();
           <div class="col-lg-7 col-md-12">
             <ul class="contact-list ">
               <li class="contact-item">
-                <h5>ФИО 1</h5>
-                <p>тел:670-898-2847</p>
+                <h5><?php echo get_option('first_person_name_field'); ?></h5>
+                <p><?php echo get_option('first_person_phone_field'); ?></p>
               </li>
               <li class="contact-item">
-                <h5>ФИО 2</h5>
-                <p>тел:670-898-2847</p>                
+                <h5><?php echo get_option('second_person_name_field'); ?></h5>
+                <p><?php echo get_option('second_person_phone_field'); ?></p>                
               </li>
               <li class="contact-item">
-                <h5>ФИО 3</h5>
-                <p>тел:670-898-2847</p>                
+                <h5><?php echo get_option('third_person_name_field'); ?></h5>
+                <p><?php echo get_option('third_person_phone_field'); ?></p>                
               </li>
             </ul>
           </div>
