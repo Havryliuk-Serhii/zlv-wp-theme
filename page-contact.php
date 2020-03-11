@@ -16,7 +16,7 @@ get_header();
         
   <section id="contact">
     <div class="page-title">
-      <h2><?php echo wp_get_document_title(); ?></h2>
+      <h2><?php single_post_title(); ?></h2>
       <p class="lead"><?php the_field('page-description'); ?></p>
     </div>
     <div class="contact-area">
